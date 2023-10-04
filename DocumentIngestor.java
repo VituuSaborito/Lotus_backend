@@ -12,7 +12,7 @@ import dev.langchain4j.retriever.EmbeddingStoreRetriever;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.EmbeddingStoreIngestor;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
-import frontend.telaArquivo;
+import frontend.TelaArquivo;
 
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -29,9 +29,9 @@ public class DocumentIngestor {
     public static final String HF_API_KEY = "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";
 	
 	public static void main(String[] args) throws Exception {
-		System.out.println(frontend.telaArquivo.nome);
+		System.out.println(frontend.TelaArquivo.nome);
         //Document document = loadDocument(toPath(telaArquivo.nome));
-        Document document = loadDocument(toPath(frontend.telaArquivo.nome));
+        Document document = loadDocument(toPath(frontend.TelaArquivo.nome));
         //choosing an embedding model
         EmbeddingModel embeddingModel = HuggingFaceEmbeddingModel.builder()
                 .accessToken(HF_API_KEY)

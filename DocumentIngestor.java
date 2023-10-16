@@ -29,9 +29,9 @@ public class DocumentIngestor {
     public static final String HF_API_KEY = "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";
 	
 	public static void main(String[] args) throws Exception {
-		System.out.println(frontend.TelaArquivo.nome);
+		System.out.println(TelaArquivo.nome);
         //Document document = loadDocument(toPath(telaArquivo.nome));
-        Document document = loadDocument(toPath(frontend.TelaArquivo.nome));
+        Document document = loadDocument(toPath(TelaArquivo.nome));
         //choosing an embedding model
         EmbeddingModel embeddingModel = HuggingFaceEmbeddingModel.builder()
                 .accessToken(HF_API_KEY)
@@ -67,7 +67,6 @@ public class DocumentIngestor {
         answer = answer.replace("...", "");
         resposta = answer;
         System.out.println(answer);
-        
 	}
 	
 	private static Path toPath(String fileName) {

@@ -5,14 +5,21 @@ public class Arquivos {
 	private String nome;
 	private String caminho;
 	private String formato;
+	private String usuario;
 	
-	public Arquivos(int id, String nome, String caminho, String formato) {
-		this.id = id;
+	public Arquivos(String nome, String caminho, String formato, String usuario) {
+		//this.id = id;
 		this.nome = nome;
 		this.caminho = caminho;
 		this.formato = formato;
+		this.usuario = usuario;
+		
 	}
 	
+	public Arquivos() {
+		
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -43,5 +50,18 @@ public class Arquivos {
 	
 	public void setFormato(String formato) {
 		this.formato = formato;
+	}
+	
+	@Override
+	public String toString() {
+		return this.getNome() + " " + this.getCaminho() + " " + this.getFormato();
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 }
